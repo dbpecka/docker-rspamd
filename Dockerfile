@@ -1,7 +1,9 @@
 FROM bitnami/minideb:bookworm
 
-RUN apt-get update && apt-get install -y \
-    rspamd
+RUN apt-get clean && \
+    apt-get update && \
+	apt-get install -y \
+        rspamd
 
 RUN mkdir -m 755 -p /run/rspamd && chown _rspamd:_rspamd /run/rspamd
 
