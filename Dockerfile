@@ -1,7 +1,7 @@
 FROM bitnami/minideb:bookworm
 
 RUN apt-get clean && \
-    apt-get update && \
+    apt-get update --allow-unauthenticated && \
 	apt-get install -y \
         rspamd
 
